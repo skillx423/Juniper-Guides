@@ -1,0 +1,213 @@
+/* ------------------------------
+   GLOBAL THEME (DARK MODE)
+--------------------------------*/
+body {
+  margin: 0;
+  background: #0f0f0f; /* deep dark background */
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #e6d7a3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ------------------------------
+   NAVBAR (DARK MODE)
+--------------------------------*/
+.navbar {
+  background: #1a1a1a;
+  border-bottom: 3px solid #6b5734;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  box-shadow: 0 0 20px #000;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  color: #f5e6a1;
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 2px 2px #000;
+  cursor: pointer;
+  transition: 0.25s ease;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.navbar a:hover {
+  color: #fff7c9;
+  background: rgba(255, 255, 200, 0.1);
+  box-shadow: 0 0 12px #f5e6a1;
+  transform: translateY(-2px);
+}
+
+/* ------------------------------
+   MAIN LAYOUT (FULL PAGE)
+--------------------------------*/
+.layout {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px 40px;
+}
+
+/* ------------------------------
+   PAGE TITLES
+--------------------------------*/
+.layout h1 {
+  font-size: 42px;
+  color: #f5e6a1;
+  text-shadow: 3px 3px #000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ------------------------------
+   SKILL GRID (FULL WIDTH)
+--------------------------------*/
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 50px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Skill button */
+.skill {
+  background: #1b1b1b;
+  border: 3px solid #a58b4a;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  position: relative;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+/* Hover FX */
+.skill:hover {
+  transform: scale(1.22) rotate(-2deg);
+  box-shadow: 0 0 22px #f5e6a1, inset 0 0 10px #a58b4a;
+  filter: brightness(1.25);
+}
+
+/* Click FX */
+.skill:active {
+  transform: scale(0.9);
+  filter: brightness(0.85);
+}
+
+/* Skill icon */
+.skill img {
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+}
+
+/* Tooltip */
+.skill:hover::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a1a;
+  padding: 5px 10px;
+  border: 2px solid #6b5734;
+  border-radius: 6px;
+  color: #f5e6a1;
+  font-size: 15px;
+  white-space: nowrap;
+  text-shadow: 1px 1px #000;
+  z-index: 10;
+}
+
+/* XP Drop */
+.xp-drop {
+  position: absolute;
+  color: #ffff99;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+  animation: xpFloat 1.2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes xpFloat {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-45px); }
+}
+
+/* ------------------------------
+   FOOTER (FIXED BOTTOM)
+--------------------------------*/
+.footer {
+  background: #1a1a1a;
+  border-top: 3px solid #6b5734;
+  padding: 12px;
+  text-align: center;
+  color: #f5e6a1;
+  text-shadow: 2px 2px #000;
+  box-shadow: 0 0 20px #000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* ------------------------------
+   GUIDE PAGE SECTIONS (DARK MODE)
+--------------------------------*/
+.guide-section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255,255,255,0.08);
+}
+
+.guide-section h2 {
+  font-size: 28px;
+  color: #f5e6a1;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 10px;
+}
+
+.guide-section p,
+.guide-section ul {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e6d7a3;
+}
+
+.guide-section ul {
+  padding-left: 20px;
+}
+
+.guide-image {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.guide-image img {
+  max-width: 80%;
+  border: 3px solid #a58b4a;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #000;
+}
+
+.caption {
+  font-size: 14px;
+  color: #f5e6a1;
+  margin-top: 5px;
+  text-shadow: 1px 1px #000;
+}
