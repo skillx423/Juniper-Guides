@@ -11,7 +11,7 @@ const clickSound = new Audio("https://runescape.wiki/images/Click.ogg");
 function spawnXPDrop(element) {
   const xp = document.createElement("div");
   xp.className = "xp-drop";
-  xp.innerText = "+10 xp";
+  xp.innerText = "+100 xp";
 
   const rect = element.getBoundingClientRect();
   xp.style.left = rect.left + rect.width / 2 + "px";
